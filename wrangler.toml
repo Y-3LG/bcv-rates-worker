@@ -1,0 +1,10 @@
+name = "bcv-rates-worker"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+kv_namespaces = [
+  { binding = "RATES_KV", id = "5ae6126f77c745a9b5625f0cdb67a3ff" }
+]
+
+[triggers]
+crons = ["*/5 * * * *"]
