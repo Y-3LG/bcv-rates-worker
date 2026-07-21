@@ -3,8 +3,10 @@ main = "src/index.ts"
 compatibility_date = "2024-01-01"
 
 kv_namespaces = [
-  { binding = "RATES_KV", id = "5ae6126f77c745a9b5625f0cdb67a3ff" }
+  { binding = "RATES_KV", id = "5ae6126f77c745a9b5625f0cdb67a3ff", preview_id = "ae76afa0837149939ec453c6e95fddd4" }
 ]
 
 [triggers]
-crons = ["*/5 * * * *"]
+# */5: tasas (BCV oficial + Binance P2P). */30: intervención cambiaria (se
+# publica pocas veces por semana, no hace falta pollear seguido).
+crons = ["*/5 * * * *", "*/30 * * * *"]
